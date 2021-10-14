@@ -202,13 +202,61 @@ convert the decimal into ascii you will get password
 
 Decimal to ascii converter link [here](https://onlineasciitools.com/convert-decimal-to-ascii)
 
-Password=k8x0w5bbuq
-
-
-
- 
-
-
 Password = **k8x0w5bbuq**
 
 ----
+# Mission level 10
+Challenge link :- [here](https://www.hackthissite.org/missions/playit/stego/10)
+![Mission 10](https://github.com/sar1m/HTS-Steganography/blob/main/file/10.png)
+# solution 
+<p>Stego 10<br />
+Look at the picture of the words.<br />
+encode it yourself, then decode with version 2.<br />
+For every bold letter is a B<br />
+and<br />
+For every not bold letter is a A</p>
+<p>The first one I think looks like BAABB = T.<br />
+BAABB = T<br />
+AABBB = H<br />
+AABAA  = E<br />
+ABBBB = P<br />
+AAAAA  = A<br />
+BAAAA &#8230;&#8230;..AND SO ON!</p>
+<p>answer = thepasswordisnothere<br />
+So just use that and its complete: nothere<br />
+Done!</p>
+
+----
+# Mission level 12
+Challenge link :- [here](https://www.hackthissite.org/missions/playit/stego/12)
+
+![Mission 12](https://github.com/sar1m/HTS-Steganography/blob/main/file/12.bmp)
+# Solution
+<p>This given bitmap has a single row of grey values, with the hint &#8216;I am the not of a file&#8217;. This sounds like the values are the &#8220;not&#8221; as in, inverse of a file. This python script I wrote will spit out the values of the bitmap:</p>
+<p>#!/usr//bin/python<br />
+import Image<br />
+import sys<br />
+im = Image.open(&#8220;12.bmp&#8221;)<br />
+newnumber = 0<br />
+oldnumber = 0<br />
+counter = 0<br />
+width = range(0,123)<br />
+hight = range(0,1)<br />
+for each2 in hight:<br />
+for each1 in width:<br />
+it = im.getpixel((each1,each2))<br />
+print chr(255-it),<br />
+sys.stdout.softspace = 0<br />
+print<br />
+If you run this you get:</p>
+<p>PK???t??8ZJ?Gpass.txt6ae4nt5TBPK????t??8ZJ?G? pass.txtPK???6/<br />
+There is something in there&#8230; is that a zip file?</p>
+<p>$ python decode.py &gt; file<br />
+$ file file<br />
+file: Zip archive data, at least v2.0 to extract<br />
+$ unzip file<br />
+Archive:  file<br />
+extracting: pass.txt<br />
+$ cat pass.txt<br />
+6ae4nt5TB</p>
+<p>So the password is: 6ae4nt5TB</p>
