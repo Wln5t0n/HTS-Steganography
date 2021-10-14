@@ -3,7 +3,7 @@ Hack this site stego solution
 # Mission level 1
 Challenge link [here](https://www.hackthissite.org/missions/playit/stego/1)
 
-![Mission 1](https://github.com/Cronic7/HTS-STEGO/blob/master/file/a.png?raw=true)
+![Mission 1](https://github.com/sar1m/HTS-Steganography/blob/master/file/a.png?raw=true)
 
 **HINT**: This is an encoded message, the only tip you get is '2 null bytes'
 # solution
